@@ -242,6 +242,10 @@
     animation: rotate360 15s linear infinite;
   }
 
+  @keyframes rotate360 {
+    0% { transform: translate(-50%, -56%) rotate(0); }
+    100% { transform: translate(-50%, -56%) rotate(1turn); }
+  }
   
   .circle-2 { animation-direction: reverse; }
   
@@ -531,6 +535,12 @@
   
   .hero .abs-img { animation: move 3s linear infinite alternate; }
   
+  @keyframes move {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-5px, 10px); }
+    100% { transform: translate(5px, 20px); }
+  }
+
   .hero .abs-img-2 { animation-direction: alternate-reverse; }
   
   /* Popup Styles */
@@ -711,6 +721,16 @@
     animation: moveUp 2.5s ease infinite;
   }
   
+  @keyframes moveUp {
+    0%,
+    30%,
+    60%,
+    100% { transform: translateY(0); }
+  
+    20% { transform: translateY(-30px); }
+  
+    40% { transform: translateY(-15px); }
+  }
   
   .about .section-text:not(:last-of-type) { margin-block-end: 15px; }
   
@@ -793,7 +813,10 @@
   }
 
   
-  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--coquelicot); }
+    100% { box-shadow: 0 0 0 40px transparent; }
+  }
   
   
   
